@@ -3,10 +3,7 @@ version: '3.5'
 volumes:
   postgres_data:
   rabbitmq-data:
-
-# networks: 
-  # vote-service-network:
-  
+ 
 services:  
     
   postgres:
@@ -18,16 +15,14 @@ services:
         - POSTGRES_DB=vote-service
     volumes:
       - postgres_data:/var/lib/postgresql/data
-    # optional port
+    
     ports: ["5555:5432"]
 
 
   rabbitmq:
-    #image: 'rabbitmq:3.6-management-alpine'
+    
     image: rabbitmq:management
-    # build:
-      # context: .
-      # dockerfile: Dockerfile-rabbitmq
+    
     environment:
       RABBITMQ_DEFAULT_USER: voteserv
       RABBITMQ_DEFAULT_PASS: voteserv@123
@@ -35,42 +30,6 @@ services:
     ports:
       - "5672:5672"
       - "15672:15672"
-    # networks: 
-      # - vote-service-network
+    
     volumes:
       - rabbitmq-data:/var/lib/rabbitmq
-
-      
-      
-  # rabbitmq:
-    # image: rabbitmq:latest
-    # hostname: rabbitmq-server
-    # #command: -d -p 15672:15672 -p 5672:5672 --name rabbitmq-server rabbitmq:latest
-    # environment:
-        # RABBITMQ_DEFAULT_USER: voteserv
-        # RABBITMQ_DEFAULT_PASS: voteserv@123
-    # container_name: rabbitmq-server
-    # ports:
-         # - "5672:5672"
-         # - "15672:15672"
-    # #expose:
-    # #    - "5672"
-    # #    - "15672"
- # #   networks: 
- # #       - vote-service-network
-    # volumes:
-        # - rabbitmq-data:/var/lib/rabbitmq
-
-  # vote-service:
-    # build:
-      # context: .
-      # dockerfile: Dockerfile
-    # image: jsouzajava/vote-service:latest
-    # container_name: vote-service
-    # ports:
-      # - "8080:8080"
-    # depends_on:
-      # - mysql
-      # - rabbitmq
-    # networks: 
-      # - vote-service-network
