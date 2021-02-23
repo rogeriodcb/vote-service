@@ -9,12 +9,12 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.voteservice</groupId>
-	<artifactId>VoteService</artifactId>
+	<artifactId>voteService</artifactId>
 	<version>0.0.1</version>
-	<name>VoteService</name>
+	<name>voteService</name>
 	<description>Vote Service Spring Boot app</description>
 	<properties>
-		<java.version>14</java.version>
+		<java.version>11</java.version>
 	</properties>
 	<dependencies>
 		<!-- SPRING FRAMEWORK -->
