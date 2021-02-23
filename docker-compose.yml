@@ -26,7 +26,7 @@ services:
     environment:
       RABBITMQ_DEFAULT_USER: voteserv
       RABBITMQ_DEFAULT_PASS: voteserv@123
-    container_name: rabbitmq-serverxxx
+    container_name: rabbitmq-server
     ports:
       - "5672:5672"
       - "15672:15672"
