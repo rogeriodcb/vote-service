@@ -11,7 +11,7 @@
 	<groupId>com.voteservice</groupId>
 	<artifactId>VoteService</artifactId>
 	<version>0.0.1</version>
-	<name>Vote</name>
+	<name>VoteService</name>
 	<description>Vote Service Spring Boot app</description>
 	<properties>
 		<java.version>13</java.version>
