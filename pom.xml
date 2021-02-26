@@ -110,6 +110,15 @@
     			<artifactId>springfox-swagger-ui</artifactId>
 			<version>2.7.0</version>
 		</dependency>
+		
+		<!-- JavaFaker -->
+		
+		<dependency>
+			<groupId>com.github.javafaker</groupId>
+			<artifactId>javafaker</artifactId>
+			<version>1.0.2</version>
+			<scope>test</scope>
+		</dependency>
 
 	</dependencies>
 
