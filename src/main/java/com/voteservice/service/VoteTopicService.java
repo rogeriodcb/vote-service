@@ -35,12 +35,11 @@ public class VoteTopicService {
     }
 
 	// call repository to save new vote topic
-    public VoteTopic save(final VoteTopic voteTopic) {
+    public MessageResponseDTO save(final VoteTopic voteTopic) {
     	VoteTopic savedVoteTopic = voteTopicRepository.save(voteTopic);
-		MessageResponseDTO.builder()
-				.message("Vote Topic created with ID" + savedVoteTopic.getVoteTopicId())
+		return MessageResponseDTO.builder()
+				.message("Vote Topic created with ID " + savedVoteTopic.getVoteTopicId())
 				.build();
-        return savedVoteTopic;
     }
 
     // find vote topic by Id

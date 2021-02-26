@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.voteservice.dto.MessageResponseDTO;
 import com.voteservice.model.VoteTopic;
 import com.voteservice.service.VoteTopicService;
 
@@ -58,12 +59,12 @@ public class VoteTopicController {
 	@PostMapping("/votetopic")
 	@ApiOperation(value="This method creates new vote topic.")
 	@ResponseStatus(code = HttpStatus.CREATED)
-	public VoteTopic create(@RequestBody @Valid VoteTopic voteTopic) {
+	public MessageResponseDTO create(@RequestBody @Valid VoteTopic voteTopic) {
 		return voteTopicService.save(voteTopic);		
 	}
  
 	@GetMapping("/votetopic/{id}")
-	@ApiOperation(value="This method find specif vote topic through the vote topic id.")
+	@ApiOperation(value="This method find specific vote topic through the vote topic id.")
 	@ResponseStatus(code = HttpStatus.OK)
 	public VoteTopic findById(@PathVariable Long id) {
 		return voteTopicService.findById(id);
