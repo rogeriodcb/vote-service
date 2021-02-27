@@ -34,7 +34,7 @@ import io.swagger.annotations.ApiOperation;
 * <li> get information about vote topic created
 */
 @RestController
-@RequestMapping(value="/api/v1")
+@RequestMapping(value="/voteservice-api/v1")
 @Api(value="API REST Cooperative vote service - Vote Topic")
 @CrossOrigin(origins="*")
 public class VoteTopicController {

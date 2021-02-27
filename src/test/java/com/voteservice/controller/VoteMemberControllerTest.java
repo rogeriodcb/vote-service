@@ -39,7 +39,7 @@ import com.voteservice.utils.VoteMemberUtils;
 @ExtendWith(MockitoExtension.class)
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 public class VoteMemberControllerTest {
-	public static final String VOTESERVICE_API_URL_PATH = "/api/v1";
+	public static final String VOTESERVICE_API_URL_PATH = "/voteservice-api/v1";
 	private MockMvc mockMvc;
 	
 	@Mock

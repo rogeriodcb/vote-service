@@ -29,7 +29,7 @@ import io.swagger.annotations.ApiOperation;
 * <li> the CPF shall be unique for each vote topic
 */
 @RestController
-@RequestMapping(value="/api/v1")
+@RequestMapping(value="/voteservice-api/v1")
 @Api(value="API REST Cooperative vote service - Vote Member")
 @CrossOrigin(origins="*")
 public class VoteMemberController {
