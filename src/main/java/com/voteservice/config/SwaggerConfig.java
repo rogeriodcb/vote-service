@@ -30,7 +30,7 @@ public class SwaggerConfig {
 		return new Docket(DocumentationType.SWAGGER_2)
 				.select()
 				.apis(RequestHandlerSelectors.basePackage("com.voteservice"))
-				.paths(regex("/api/v1.*"))
+				.paths(regex("/voteservice-api/v1.*"))
 				.build()
 				.apiInfo(metaInfo());
 	}
