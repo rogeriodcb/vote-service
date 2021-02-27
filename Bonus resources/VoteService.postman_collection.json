@@ -1,0 +1,38 @@
+{
+	"info": {
+		"_postman_id": "76ecfb76-9b9d-445d-a2b5-3e6b02509bf2",
+		"name": "VoteService",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "LocalMessageTest",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"text\":\"teste de mensagem !!!\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/send/",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"send",
+						""
+					]
+				},
+				"description": "Local message test"
+			},
+			"response": []
+		}
+	]
+}
