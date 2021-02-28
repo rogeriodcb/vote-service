@@ -49,17 +49,17 @@ public class VoteSession {
 	private Long voteSessionId;
 	
 	@Column(name="date_time_start", nullable = false)
-	@NotNull(message="The start Date and Time shall be passed")
+	@NotNull(message="The start Date and Time shall be assigned")
 	private LocalDateTime dateTimeToStart;
 	
 	// for this case, if the date time to end was not passed assumes 1 minute
 	@Column(name="date_time_end",nullable = true)
-	@NotNull(message="The end Date and Time shall be passed")
+	@NotNull(message="The end Date and Time shall be assigned")
 	private LocalDateTime dateTimeToEnd;
 	
 	// for this case, if the date time to end was not passed assumes 1 minute
 	@Column(name="session_status",nullable = true)
-	@NotNull(message="The end Date and Time shall be passed")
+	@NotNull(message="The status shall be assigned")
 	private String status;
 		
 	

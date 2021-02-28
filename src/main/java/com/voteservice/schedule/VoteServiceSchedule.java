@@ -51,6 +51,7 @@ public class VoteServiceSchedule {
 		for(VoteSession vs: sessionService.checkStatus()) {
 			// verify if the session shall be opened
 			if((vs.getStatus().equals("standby")) && (vs.getDateTimeToStart().isBefore(dt)) && (vs.getDateTimeToEnd().isAfter(dt))) {
+				System.out.println("The session for vote topic " + vs.getVoteTopicId().getName()+" was opened and able to vote.");
 
 				vs.setStatus("opened");
 				sessionService.save(vs);
@@ -71,6 +72,7 @@ public class VoteServiceSchedule {
 			}
 			// in case of the validation cannot pass to opened and end datetime is done then close without send message (no voting occurred)
 			else if((vs.getStatus().equals("standby")) && (vs.getDateTimeToEnd().isBefore(dt)) ){
+				System.out.println("The session for vote topic " + vs.getVoteTopicId().getName()+" will be closed due the time limit, "+dt+", was reached. Unable to vote in this session.");
 
 				vs.setStatus("closed");
 				sessionService.save(vs);
