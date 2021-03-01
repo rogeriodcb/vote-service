@@ -1,6 +1,6 @@
 # VoteService application
 This Rest API provides a simple vote management back-end to simulate assemblies voting by each member of a coperative.
-You can create a vote topic, session for each vote topic and members voting through a valid and able CPF documentation.
+<p>You can create a vote topic, session for each vote topic and members voting through a valid and able CPF documentation.
 
 ## Running in Docker container
 ### You need to install:
@@ -10,6 +10,7 @@ You can create a vote topic, session for each vote topic and members voting thro
 ```
 
 ### To execute the application : 
+At the same "docker-compose.yml" folder type:
 ```
 - docker-compose down (if containers were previously uploaded)
 - docker-compose build --no-cache
@@ -47,7 +48,7 @@ Suppose that your application is on Heroku, called "voteserviceapp" and you want
 
 ## Unit tests
 The unit tests can be found in "vote-service\src\test\java\com\voteservice" folder. 
-The purpose of the made tests is to demonstrate usage. The tests did not cover the entire project and cases.
+<p>The purpose of the tests performed is to demonstrate the use. The tests did not cover the entire project and cases.
 
 ## Performance test
 To do the performance test:
@@ -57,8 +58,8 @@ To do the performance test:
  - Run the test by clicking in play arrow
 ```
 
-Note 1: this is a demonstration of performance test and didn't cover all cases
-Note 2: To do the tests the databank postgres shall be empty. No methods were implemented to delete data from the databank in the voteservice project. This implementation may improve the automation of jmeter to avoid manually databank deletion (this is a brainstorm).
+Note 1: this is a demonstration of performance test and didn't cover all cases.
+<p>Note 2: To do the tests the databank postgres shall be empty. No methods were implemented to delete data from the databank in the voteservice project. This implementation may improve the automation of jmeter to avoid manually databank deletion (this is a brainstorm).
 
 ## API versioning
 Changes and new features are implemented in new versions instead of altering the same version. With versioning old clients can continue to use the oldest API version and upgrading their applications to the newer one.
