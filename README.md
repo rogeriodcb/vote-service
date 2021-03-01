@@ -45,8 +45,20 @@ Suppose that your application is on Heroku, called "voteserviceapp" and you want
 - Enter https://voteserviceapp.herokuapp.com/swagger-ui.html and use Swagger-ui to test application
 ```
 
+## Unit tests
+The unit tests can be found in "vote-service\src\test\java\com\voteservice" folder. 
+The purpose of the made tests is to demonstrate usage. The tests did not cover the entire project and cases.
+
 ## Performance test
-To do the performance test the Jmeter was used. Open the file 
+To do the performance test:
+```
+ - install Jmeter
+ - Run Jmeter and open file ".\vote-service\Bonus resources\PerformanceTest.jmx"
+ - Run the test by clicking in play arrow
+```
+
+Note 1: this is a demonstration of performance test and didn't cover all cases
+Note 2: To do the tests the databank postgres shall be empty. No methods were implemented to delete data from the databank in the voteservice project. This implementation may improve the automation of jmeter to avoid manually databank deletion (this is a brainstorm).
 
 ## API versioning
 Changes and new features are implemented in new versions instead of altering the same version. With versioning old clients can continue to use the oldest API version and upgrading their applications to the newer one.
